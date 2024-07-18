@@ -118,13 +118,10 @@ public class ReminderHelper extends BaseHelper {
 
     public void tapOnTypeOfRepetitions() {
         swipe(0.8, 0.6);
-        tap(By.id("repeat_type_text"));
+        tap(By.id("RepeatType"));
     }
 
-    public void selectTypeOfRepetitions(int index) {
-//        pause(1000);
-//        List<WebElement> types = driver.findElements(By.className("android.widget.ListView"));
-//        types.get(index).click();
-        tap(By.xpath("//android.widget.TextView[@resource-id='android:id/text1' and @text='Day']"));
+    public void selectTypeOfRepetitions(String typeRep) {
+        tap(By.xpath("//*[@text='" + typeRep + "']"));
     }
 }

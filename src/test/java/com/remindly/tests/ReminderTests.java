@@ -63,7 +63,7 @@ public class ReminderTests extends TestBase {
         app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
         app.getReminder().tapOnTypeOfRepetitions();
-        app.getReminder().selectTypeOfRepetitions(2);
+        app.getReminder().selectTypeOfRepetitions("Day");
         app.getReminder().tapOnSaveReminder();
         Assert.assertTrue(app.getMainScreen().isReminderRepeatTextPresent().contains("Day"));
     }
