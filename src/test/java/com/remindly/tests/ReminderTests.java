@@ -44,7 +44,7 @@ public class ReminderTests extends TestBase {
         app.getReminder().enterReminderTitle("Holiday");
         app.getReminder().turnSwitchOff();
         app.getReminder().tapOnSaveReminder();
-        Assert.assertTrue(app.getMainScreen().isReminderRepeatOffPresent().contains("Repeat Off"));
+        Assert.assertTrue(app.getMainScreen().isReminderRepeatTextPresent().contains("Repeat Off"));
     }
 
     @Test
@@ -55,7 +55,7 @@ public class ReminderTests extends TestBase {
         app.getReminder().enterRepetitionInterval("3");
         app.getReminder().tapOnOkButton();
         app.getReminder().tapOnSaveReminder();
-        Assert.assertTrue(app.getMainScreen().isReminderRepetitionIntervalPresent().contains("3"));
+        Assert.assertTrue(app.getMainScreen().isReminderRepeatTextPresent().contains("3"));
     }
 
     @Test
@@ -65,6 +65,6 @@ public class ReminderTests extends TestBase {
         app.getReminder().tapOnTypeOfRepetitions();
         app.getReminder().selectTypeOfRepetitions(2);
         app.getReminder().tapOnSaveReminder();
-        Assert.assertTrue(app.getMainScreen().isReminderRepetitionTypePresent().contains("Day"));
+        Assert.assertTrue(app.getMainScreen().isReminderRepeatTextPresent().contains("Day"));
     }
 }
